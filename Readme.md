@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Софья Ильина](https://up.htmlacademy.ru/adaptive/26/user/1747261).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий (sench) Железцов](https://htmlacademy.ru/profile/sench).
 
 ---
 
