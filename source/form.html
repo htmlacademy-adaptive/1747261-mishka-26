@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
-    <meta charset="utf-8">
-    <title>Мишка — интернет-магазин игрушек</title>
+    <meta charset="UTF-8">
+    <title>Мишка — форма заказа</title>
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo">
+      <a class="main-header__logo" href="index.html">
         <img src="img/content/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип сайта Мишка.">
       </a>
       <nav class="main-nav">
@@ -52,154 +52,123 @@
         </div>
       </nav>
     </header>
+
     <main class="main-container">
-      <h1 class="visually-hidden">Мишка — интернет-магазин игрушек ручной работы</h1>
+      <h1 class="main-container__title">Вязание на заказ</h1>
 
-      <section class="promo">
-        <div class="promo__wrapper">
-          <h2 class="promo__title">Милые штуки ручной работы для дома</h2>
+      <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
+        <p class="form-feedback__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните
+          простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
-          <ul class="promo__list promo-list">
-            <li class="promo-list__item">
-              <a class="promo-list__link promo-list__link--interior" href="#">
-                Предметы<br>
-                интерьера
-              </a>
-            </li>
-            <li class="promo-list__item">
-              <a class="promo-list__link promo-list__link--children" href="#">
-                Детские<br>
-                игрушки
-              </a>
-            </li>
-          </ul>
+        <fieldset class="form-feedback__fieldset">
+          <legend class="form-feedback__legend">Тип</legend>
+
+            <p class="form-feedback__input-wrapper">
+              <input class="form-feedback__radio visually-hidden" type="radio" id="interior" name="type" value="1"
+                  checked>
+              <label class="form-feedback__label-radio" for="interior">Аксессуар для интерьера</label>
+            </p>
+
+            <p class="form-feedback__input-wrapper">
+              <input class="form-feedback__radio visually-hidden" type="radio" id="children" value="2" name="type">
+              <label class="form-feedback__label-radio" for="children">Детская игрушка</label>
+            </p>
+        </fieldset>
+
+        <fieldset class="form-feedback__fieldset">
+          <legend class="form-feedback__legend">Цвет</legend>
+
+            <p class="form-feedback__input-wrapper">
+              <input class="form-feedback__checkbox visually-hidden" type="checkbox" id="color-white" name="color-white"
+                checked>
+              <label class="form-feedback__label-checkbox" for="color-white">Белый</label>
+            </p>
+
+            <p class="form-feedback__input-wrapper">
+              <input class="form-feedback__checkbox visually-hidden" type="checkbox" id="color-gray" name="color-gray"
+                checked>
+              <label class="form-feedback__label-checkbox" for="color-gray">Серый</label>
+            </p>
+
+            <p class="form-feedback__input-wrapper">
+              <input class="form-feedback__checkbox visually-hidden" type="checkbox" id="color-tiffany" name="color-tiffany">
+              <label class="form-feedback__label-checkbox" for="color-tiffany">«Тиффани»</label>
+            </p>
+
+            <p class="form-feedback__input-wrapper">
+              <input class="form-feedback__checkbox visually-hidden" type="checkbox" id="color-black" name="color-black">
+              <label class="form-feedback__label-checkbox" for="color-black">Черный</label>
+            </p>
+
+            <p class="form-feedback__input-wrapper">
+              <input class="form-feedback__checkbox visually-hidden" type="checkbox" id="color-pink" name="color-pink">
+              <label class="form-feedback__label-checkbox" for="color-pink">Розовый</label>
+            </p>
+
+            <p class="form-feedback__input-wrapper">
+              <input class="form-feedback__checkbox visually-hidden" type="checkbox" id="color-orange" name="color-orange">
+              <label class="form-feedback__label-checkbox" for="color-orange">Оранжевый</label>
+            </p>
+        </fieldset>
+
+        <fieldset class="form-feedback__fieldset">
+          <legend class="form-feedback__legend">ФИО</legend>
+
+          <p class="form-feedback__input-wrapper">
+            <label class="form-feedback__label" for="firstname">Имя:</label>
+            <input class="form-feedback__input-text" type="text" id="firstname" name="firstname" placeholder="Введите ваше имя*" required>
+          </p>
+
+          <p class="form-feedback__input-wrapper">
+            <label class="form-feedback__label" for="lastname">Фамилия:</label>
+            <input class="form-feedback__input-text" type="text" id="lastname" name="lastname" placeholder="Укажите фамилию*" required>
+          </p>
+
+          <p class="form-feedback__input-wrapper">
+            <label class="form-feedback__label" for="middlename">Отчество:</label>
+            <input class="form-feedback__input-text" type="text" id="middlename" name="middlename" placeholder="Отчество, если желаете">
+          </p>
+        </fieldset>
+
+        <fieldset class="form-feedback__fieldset">
+
+          <label class="form-feedback__legend" for="phone">Тел</label>
+          <p class="form-feedback__input-wrapper">
+            <input class="form-feedback__input-text" type="tel" id="phone" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+            <svg class="form-feedback__input-image" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.2">
+                <path d="M17.4395 24C17.0363 24 16.7339 24 16.3306 24C11.3911 23.4074 7.7621 21.1358 5.14113 18.2717C2.52016 15.4075 0.403226 11.7532 0 6.7162C0 6.22237 0 5.82731 0 5.33349C0.100806 4.44461 0.504032 3.85202 1.10887 3.25943C1.71371 2.56808 2.72177 1.77796 3.62903 1.6792C4.33468 1.6792 5.44355 2.17302 5.84677 2.76561C6.25 3.25943 6.45161 4.34584 6.65323 5.13596C6.85484 6.02484 7.25806 7.11125 7.15726 7.90137C6.95565 9.08655 5.34274 9.58037 4.93952 10.4693C6.55242 14.1235 9.07258 16.889 12.5 18.6667C13.3065 18.1729 14.1129 16.7902 15.3226 16.7902C15.7258 16.7902 16.3306 16.9877 16.7339 17.0865C17.2379 17.1852 17.6411 17.3828 18.0444 17.5803C18.75 17.8766 20.0605 18.1729 20.4637 18.7655C20.8669 19.3581 21.1694 20.3457 21.0685 20.9383C20.7661 22.2222 18.6492 23.6049 17.4395 24Z" fill="black"/>
+                <path d="M12.6008 1.48147C18.5484 1.48147 23.4879 6.22217 23.4879 12.1481H25C25 5.43205 19.4556 0 12.6008 0V1.48147Z" fill="black"/>
+                <path d="M12.6008 9.18506V10.7653C13.4073 10.7653 14.0121 11.3579 14.0121 12.148H15.625C15.625 10.5678 14.3145 9.18506 12.6008 9.18506Z" fill="black"/>
+                <path d="M12.6008 6.12356C15.9274 6.12356 18.75 8.79021 18.75 12.1482H20.3629C20.3629 8.00009 16.9355 4.64209 12.7016 4.64209V6.12356H12.6008Z" fill="black"/>
+              </g>
+            </svg>
+          </p>
+
+          <label class="form-feedback__legend" for="email">E-mail</label>
+          <p class="form-feedback__input-wrapper">
+            <input class="form-feedback__input-text" type="email" id="email" name="email" placeholder="Ваш Email*" required>
+            <svg class="form-feedback__input-image" width="32" height="21" viewBox="0 0 32 21" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.2" d="M28 0H4C1.8 0 0 1.8 0 4V17C0 19.2 1.8 21 4 21H28C30.2 21 32 19.2 32 17V4C32 1.8 30.2 0 28 0ZM2 5.3L9 10.6L2 15.9V5.3ZM30 17C30 18.1 29.1 19 28 19H4C2.9 19 2 18.1 2 17L9.8 11.1L14.2 14.4C14.7 14.8 15.4 15 16 15C16.6 15 17.3 14.8 17.8 14.4L22.2 11.1L30 17ZM30 15.8L23 10.5L30 5.2V15.8ZM17.2 13.6C16.8 13.9 16.4 14 16 14C15.6 14 15.1 13.9 14.8 13.6L10.7 10.5L9.9 9.9L2 4C2 2.9 2.9 2 4 2H28C29.1 2 30 2.9 30 4L17.2 13.6Z" fill="black"/>
+            </svg>
+          </p>
+        </fieldset>
+
+        <fieldset class="form-feedback__fieldset">
+          <legend class="form-feedback__legend">Доп</legend>
+
+          <label class="form-feedback__label" for="message"></label>
+          <textarea class="form-feedback__input-text form-feedback__textarea" name="message" id="message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </fieldset>
+
+        <div class="form-feedback__button-wrapper">
+          <p class="form-feedback__notification">*Поля обязательны для заполнения</p>
+
+          <button class="form-feedback__button button" type="submit">Отправить заказ</button>
         </div>
-      </section>
-
-      <section class="product-week">
-        <div class="product-week__wrapper">
-          <h2 class="product-week__title">Товар недели</h2>
-          <h3 class="product-week__subtitle">Вязаные корзинки</h3>
-          <p class="product-week__description">Экологически чистая пряжа,
-            ручная работа. Доступны в шести расцветках и трёх размерах.</p>
-          <dl class="product-week__list features-list">
-            <div class="features-list__item">
-              <dt class="features-list__name">
-                Цвет:
-              </dt>
-              <dd class="features-list__value">
-                тиффани/серый
-              </dd>
-            </div>
-            <div class="features-list__item">
-              <dt class="features-list__name">
-                Диаметр:
-              </dt>
-              <dd class="features-list__value">
-                25 см
-              </dd>
-            </div>
-            <div class="features-list__item">
-              <dt class="features-list__name">
-                Высота:
-              </dt>
-              <dd class="features-list__value">
-                15 см
-              </dd>
-            </div>
-          </dl>
-          <img class="product-week__image" src="img/content/triple-set-carts-mobile.jpg" width="260" height="315" alt="Вязаные корзинки цвета тиффани/серый в трёх размерах.">
-          <p class="product-week__price">Цена: 990 руб.</p>
-          <a class="product-week__button button" href="order.html">Заказать</a>
-        </div>
-      </section>
-
-      <section class="advantages">
-        <div class="advantages__wrapper">
-          <h2 class="advantages__title">Коротко о нас:</h2>
-          <ul class="advantages__list">
-            <li class="advantages__item advantages__item--ecology">Экологически чистые материалы</li>
-            <li class="advantages__item advantages__item--style">Скандинавский стиль по российской цене</li>
-            <li class="advantages__item advantages__item--likes">Увеличивает лайки на фотографиях</li>
-            <li class="advantages__item advantages__item--handmade">Связано вручную с любовью и умилением</li>
-            <li class="advantages__item advantages__item--support">Поддержка отечественного производителя</li>
-            <li class="advantages__item advantages__item--gift-wrap">Поставляется в подарочной упаковке</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="reviews">
-        <div class="reviews__wrapper slider">
-          <h2 class="reviews__title">Отзывы</h2>
-
-          <div class="reviews__list slider__list">
-            <blockquote class="reviews__item slider__item">
-              <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как
-              у популярных инстамамочек.
-              В отчаянии, я накупила аксессуаров и игрушек в Мишке,
-              и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-              <cite class="reviews__author">
-                <span class="reviews__author-name">Анастасия Красильникова</span>
-                <a class="reviews__author-email" href="mailto:misssssiskras@gmail.com">@misssssiskras</a>
-              </cite>
-            </blockquote>
-
-            <blockquote class="reviews__item slider__item">
-              <p class="reviews__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
-                и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
-                больше лайков!</p>
-              <cite class="reviews__author">
-                <span class="reviews__author-name">Екатерина Красильникова</span>
-                <a class="reviews__author-email" href="mailto:misssssiskras2@gmail.com">@misssssiskras2</a>
-              </cite>
-            </blockquote>
-
-            <blockquote class="reviews__item slider__item">
-              <p class="reviews__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
-                и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
-                больше лайков!</p>
-              <cite class="reviews__author">
-                <span class="reviews__author-name">Елена Красильникова</span>
-                <a class="reviews__author-email" href="mailto:misssssiskras3@gmail.com">@misssssiskras3</a>
-              </cite>
-            </blockquote>
-          </div>
-
-          <div class="reviews__toggles">
-            <button class="slider__toggle slider__toggle--prev" type="button">
-              <span class="visually-hidden">Назад.</span>
-            </button>
-            <button class="slider__toggle slider__toggle--next" type="button">
-              <span class="visually-hidden">Вперёд.</span>
-            </button>
-          </div>
-          <a class="reviews__button button" href="#">Написать</a>
-        </div>
-      </section>
-
-      <section class="contacts">
-        <div class="contacts__wrapper">
-          <h2 class="contacts__title">Контакты</h2>
-
-          <dl class="contacts__list">
-            <dt class="contacts__list-term">e-mail:</dt>
-            <dd class="contacts__list-description"><a class="mail-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
-            <dt class="contacts__list-term">адрес:</dt>
-            <dd class="contacts__list-description">
-              г. Санкт-Петербург<br>
-              ул. Большая Конюшенная<br>
-              д. 19/8, офис 101</dd>
-          </dl>
-
-          <div class="contacts__map map">
-            <img class="map__image" src="img/content/map.jpg" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101.">
-            <div class="map__pin"></div>
-          </div>
-
-          <a class="contacts__button button" href="#">Напишите нам</a>
-        </div>
-      </section>
+      </form>
     </main>
+
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <div class="main-footer__social social">
