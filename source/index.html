@@ -240,5 +240,28 @@
         </div>
       </div>
     </footer>
+
+    <section class="page__modal modal visually-hidden">
+      <form class="modal__add-cart add-cart">
+        <h2 class="add-cart__title">Добавить в&nbsp;корзину</h2>
+
+        <fieldset class="add-cart__fieldset">
+          <legend class="add-cart__legend">Выберите размер:</legend>
+
+          <div class="add-cart__input-wrapper">
+            <input class="add-cart__radio visually-hidden" type="radio" id="size-s" name="size" value="1" checked>
+            <label class="add-cart__label" for="size-s">S</label>
+
+            <input class="add-cart__radio visually-hidden" type="radio" id="size-m" name="size" value="2" checked>
+            <label class="add-cart__label" for="size-m">M</label>
+
+            <input class="add-cart__radio visually-hidden" type="radio" id="size-l" name="size" value="3" checked>
+            <label class="add-cart__label" for="size-l">L</label>
+          </div>
+        </fieldset>
+
+        <button class="add-cart__button button" type="submit">Добавить</button>
+      </form>
+    </section>
   </body>
 </html>
