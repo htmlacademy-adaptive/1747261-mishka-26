@@ -1,1 +1,57 @@
 // Начните писать стили здесь
+@import "blocks/button.less";
+@import "blocks/main-header.less";
+@import "blocks/main-nav.less";
+@import "blocks/site-list.less";
+@import "blocks/user-list.less";
+@import "blocks/promo.less";
+@import "blocks/promo-list.less";
+@import "blocks/product-week.less";
+@import "blocks/advantages.less";
+@import "blocks/reviews.less";
+@import "blocks/contacts.less";
+@import "blocks/map.less";
+@import "blocks/main-footer.less";
+@import "blocks/copyright.less";
+
+@basic-color: #444444;
+@downy: #63D1BB;
+@puerto-rico: #56C3B2;
+@black: #000000;
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/opensans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/opensansbold.woff2") format("woff2");
+  font-display: swap;
+}
+
+.page__body {
+  font-family: "Open Sans", serif;
+  font-size: 15px;
+  line-height: 24px;
+  background-color: #ffffff;
+  color: @basic-color;
+  margin: 0;
+  min-height: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

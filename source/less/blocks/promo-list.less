@@ -1,0 +1,40 @@
+.promo-list {
+  padding: 0;
+  margin: 0;
+}
+
+.promo-list__item {
+  padding: 0;
+  list-style-type: none;
+
+  &--interior {
+    background-color: @downy;
+  }
+
+  &--children {
+    background-color: @puerto-rico;
+  }
+}
+
+.promo-list__link {
+  font-weight: 700;
+  font-size: 19px;
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: right center;
+  text-decoration: none;
+  display: block;
+  max-width: 260px;
+  margin: 0 auto;
+  padding: 24px 0 31px;
+
+  &--interior {
+    background-color: @downy;
+    background-image: url("../../img/decorative/interior.svg");
+  }
+
+  &--children {
+    background-color: @puerto-rico;
+    background-image: url("../../img/decorative/toy.svg");
+  }
+}
