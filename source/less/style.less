@@ -1,7 +1,5 @@
-@import "blocks/font.less";
-@import "blocks/mixins.less";
-@import "blocks/variable.less";
-@import "blocks/reset-list.less";
+@import "global.less";
+@import "font.less";
 @import "blocks/page.less";
 @import "blocks/button.less";
 @import "blocks/main-header.less";
@@ -25,17 +23,3 @@
 @import "blocks/form-feedback.less";
 @import "blocks/modal.less";
 @import "blocks/add-cart.less";
-
-.page__body {
-  font-family: "Open Sans", serif;
-  font-size: 15px;
-  line-height: 24px;
-  background-color: @white;
-  color: @basic-color;
-  margin: 0;
-  min-height: 100%;
-}
-
-.visually-hidden {
-  .visually-hidden();
-}
