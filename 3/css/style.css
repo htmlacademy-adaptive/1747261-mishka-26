@@ -1,3 +1,27 @@
+.reset-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.page__body {
+  font-family: "Open Sans", serif;
+  font-size: 15px;
+  line-height: 24px;
+  background-color: #ffffff;
+  color: #444444;
+  margin: 0;
+  min-height: 100%;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
@@ -69,7 +93,6 @@
 }
 .site-list__item {
   border-bottom: 1px solid #ececec;
-  list-style-type: none;
 }
 .user-list__item {
   border-bottom: 1px solid #ececec;
@@ -95,14 +118,9 @@
   max-width: 260px;
   margin: 0 auto;
 }
-.form-feedback__button {
-  background-color: #ffffff;
-  margin: 0;
-  padding: 0;
-}
 .promo {
   background-color: #ffffff;
-  background-image: url("../../img/decorative/promo-mobile.jpg");
+  background-image: url("../img/decorative/promo-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   margin-top: -17px;
@@ -122,19 +140,11 @@
   min-height: 212px;
   max-width: 260px;
 }
-.promo-list {
-  padding: 0;
-  margin: 0;
-}
-.promo-list__item {
-  padding: 0;
-  list-style-type: none;
-}
 .promo-list__item--interior {
-  background-color: #63D1BB;
+  background-color: #63d1bb;
 }
 .promo-list__item--children {
-  background-color: #56C3B2;
+  background-color: #56c3b2;
 }
 .promo-list__link {
   font-weight: 700;
@@ -149,12 +159,12 @@
   padding: 24px 0 31px;
 }
 .promo-list__link--interior {
-  background-color: #63D1BB;
-  background-image: url("../../img/decorative/interior.svg");
+  background-color: #63d1bb;
+  background-image: url("../img/decorative/interior.svg");
 }
 .promo-list__link--children {
-  background-color: #56C3B2;
-  background-image: url("../../img/decorative/toy.svg");
+  background-color: #56c3b2;
+  background-image: url("../img/decorative/toy.svg");
 }
 .product-week {
   margin: 0 auto;
@@ -165,7 +175,7 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
-  color: #63D1BB;
+  color: #63d1bb;
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 18px;
@@ -196,7 +206,7 @@
   display: block;
   width: 100%;
   height: 6px;
-  background-image: url("../../img/decorative/zigzag-line.svg");
+  background-image: url("../img/decorative/zigzag-line.svg");
 }
 .advantages__wrapper {
   max-width: 260px;
@@ -209,14 +219,9 @@
   margin: 0;
   margin-bottom: 28px;
 }
-.advantages__list {
-  padding: 0;
-  margin: 0;
-}
 .advantages__item {
   font-size: 17px;
   line-height: 20px;
-  list-style-type: none;
 }
 .advantages__item:not(:last-child) {
   margin-bottom: 30px;
@@ -263,7 +268,7 @@
   display: block;
   width: 100%;
   height: 6px;
-  background-image: url("../../img/decorative/zigzag-line.svg");
+  background-image: url("../img/decorative/zigzag-line.svg");
 }
 .contacts__title {
   font-weight: 700;
@@ -282,8 +287,8 @@
 }
 .contacts__mail-link {
   color: #444444;
-  -webkit-text-decoration-color: #63D1BB;
-          text-decoration-color: #63D1BB;
+  -webkit-text-decoration-color: #63d1bb;
+          text-decoration-color: #63d1bb;
   text-underline-offset: 4px;
 }
 .contacts__button {
@@ -298,7 +303,7 @@
   margin: 0 auto;
 }
 .map__pin {
-  background-image: url("../../img/decorative/map-pin.svg");
+  background-image: url("../img/decorative/map-pin.svg");
   background-repeat: no-repeat;
   width: 67px;
   height: 100px;
@@ -335,10 +340,6 @@
 .catalog__catalog-list {
   margin: 0 auto;
   max-width: 260px;
-}
-.catalog-list {
-  list-style-type: none;
-  padding: 0;
 }
 .catalog-list__item:not(:last-child) {
   margin-bottom: 30px;
@@ -387,7 +388,7 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
-  color: #63D1BB;
+  color: #63d1bb;
   text-transform: uppercase;
   padding: 0;
 }
@@ -416,7 +417,7 @@
 .add-cart {
   padding: 30px;
   padding-bottom: 45px;
-  background: #fcfcfc;
+  background-color: #fcfcfc;
   border-top: 1px solid #c6c6c6;
   border-bottom: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
@@ -441,28 +442,9 @@
   line-height: 16px;
 }
 .add-cart__button {
-  background-color: #63D1BB;
+  background-color: #63d1bb;
   color: #ffffff;
   border: none;
   width: 100%;
-}
-.page__body {
-  font-family: "Open Sans", serif;
-  font-size: 15px;
-  line-height: 24px;
-  background-color: #ffffff;
-  color: #444444;
-  margin: 0;
-  min-height: 100%;
-}
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */
