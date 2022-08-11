@@ -1,5 +1,21 @@
+.catalog-list {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 51px;
+  }
+}
+
 .catalog-list__item {
   &:not(:last-child) {
     margin-bottom: 30px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 54px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0;
+    }
   }
 }

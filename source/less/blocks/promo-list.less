@@ -1,3 +1,10 @@
+.promo-list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    margin: 0 50px;
+  }
+}
+
 .promo-list__item {
   &--interior {
     background-color: @downy;
@@ -5,6 +12,10 @@
 
   &--children {
     background-color: @puerto-rico;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
   }
 }
 
@@ -16,17 +27,32 @@
   background-position: right center;
   text-decoration: none;
   display: block;
-  max-width: 260px;
-  margin: 0 auto;
+  margin: 0 30px;
+  margin-right: 27px;
   padding: 24px 0 31px;
 
   &--interior {
     background-color: @downy;
     background-image: url("../img/decorative/interior.svg");
+    margin-right: 36px;
   }
 
   &--children {
     background-color: @puerto-rico;
     background-image: url("../img/decorative/toy.svg");
+
+    @media (min-width: @tablet-width) {
+      margin-right: 33px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 35px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 36px;
   }
 }

@@ -6,8 +6,20 @@
     content: "";
     display: block;
     width: 100%;
+    max-width: 1050px;
     height: 6px;
     background-image: url("../img/decorative/zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
+    margin: 0 auto;
+
+    @media (min-width: @tablet-width) {
+      height: 17px;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 23px;
+    }
   }
 }
 
@@ -15,6 +27,16 @@
   max-width: 260px;
   margin: 0 auto;
   padding: 31px 0 58px;
+
+  @media (min-width: @tablet-width) {
+    padding: 36px 0 82px;
+    max-width: 668px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 68px 0 90px;
+    max-width: 700px;
+  }
 }
 
 .advantages__title {
@@ -24,11 +46,34 @@
   margin-bottom: 28px;
 }
 
+.advantages__list {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .advantages__item {
   font-size: 17px;
   line-height: 20px;
 
   &:not(:last-child) {
     margin-bottom: 30px;
+  }
+
+  &--style {
+    @media (min-width: @tablet-width) {
+      grid-row: 2/3;
+    }
+  }
+
+  &--likes {
+    @media (min-width: @tablet-width) {
+      grid-row: 3/4;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 40px;
   }
 }
