@@ -1,7 +1,33 @@
+.reviews {
+  @media (min-width: @desktop-width) {
+    padding: 0 50px;
+  }
+}
+
 .reviews__wrapper {
-  max-width: 260px;
-  margin: 0 auto;
+  padding: 0 30px;
   padding-bottom: 45px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 876px;
+    padding: 79px 50px 47px;
+    margin: 0 auto;
+    margin-bottom: 68px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    background-image: url("../img/content/review-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1050px;
+    margin-bottom: 67px;
+    padding-left: 174px;
+    padding-bottom: 96px;
+  }
 }
 
 .reviews__title {
@@ -11,6 +37,13 @@
   color: @black;
   margin: 0;
   margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    order: -2;
+    margin: 0;
+  }
 }
 
 .reviews__item {
@@ -36,4 +69,23 @@
   line-height: 30px;
   color: @basic-color;
   display: block;
+}
+
+.reviews__toggles {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 62px;
+    right: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 111px;
+  }
+}
+
+.reviews__button {
+  @media (min-width: @tablet-width) {
+    padding: 16px 26px;
+    order: -1;
+  }
 }

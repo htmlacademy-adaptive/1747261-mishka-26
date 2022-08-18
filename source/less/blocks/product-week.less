@@ -1,7 +1,20 @@
-.product-week {
+.product-week__wrapper {
+  padding: 31px 0 36px;
   margin: 0 auto;
   max-width: 260px;
-  padding: 31px 0 36px;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 50px 52px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 132px 307px 525px;
+    column-gap: 43px;
+  }
 }
 
 .product-week__title {
@@ -12,18 +25,81 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 2/3;
+    justify-self: end;
+    width: 100px;
+    text-align: center;
+    margin-right: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 2/7;
+    grid-column: 1/2;
+    margin: 0;
+  }
 }
 
 .product-week__subtitle {
+  color: @black;
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
   margin: 0;
   margin-bottom: 4px;
+
+  @media (min-width: @tablet-width) {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin-right: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+    grid-row: 2/3;
+    grid-column: 2/4;
+    z-index: 1;
+  }
+}
+
+.product-week__description {
+  @media (min-width: @tablet-width) {
+    margin-right: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    margin-right: 15px;
+  }
 }
 
 .product-week__list {
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 4/5;
+    grid-column: 2/3;
+    margin-right: 15px;
+  }
+}
+
+.product-week__image {
+  @media (min-width: @tablet-width) {
+    grid-column: 2/3;
+    grid-row: 2/6;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 1/7;
+    grid-column: 3/4;
+  }
 }
 
 .product-week__price {
@@ -32,4 +108,26 @@
   text-align: center;
   margin: 0;
   padding: 26px 0 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 5/6;
+    grid-column: 2/3;
+    margin-right: 15px;
+  }
+}
+
+.product-week__button {
+  @media (min-width: @tablet-width) {
+    margin-right: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 6/7;
+    grid-column: 2/3;
+    margin-right: 15px;
+  }
 }

@@ -4,10 +4,20 @@
   background-repeat: no-repeat;
   background-position: top center;
   margin-top: -17px;
+
+  @media (min-width: @tablet-width) {
+    background-color: @promo;
+    margin-top: -68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -65px;
+  }
 }
 
 .promo__wrapper {
   margin: 0 auto;
+  max-width: 1150px;
 }
 
 .promo__title {
@@ -21,4 +31,17 @@
   margin: 0 auto;
   min-height: 212px;
   max-width: 260px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    max-width: 668px;
+    min-height: 472px;
+    padding-top: 155px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

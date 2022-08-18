@@ -2,6 +2,14 @@
   border: 1px solid #ececec;
   padding-top: 22px;
   padding-bottom: 33px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 683px 1fr;
+    column-gap: 79px;
+  }
 }
 
 .video__title {
@@ -9,13 +17,30 @@
   color: @black;
   padding: 0 34px;
   margin: 0;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .video__content-wrapper {
   max-width: 260px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 1/3;
+    
+  }
 }
 
 .video__description-wrapper {
   padding: 0 34px;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
