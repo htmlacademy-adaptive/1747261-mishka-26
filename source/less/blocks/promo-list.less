@@ -8,10 +8,23 @@
 .promo-list__item {
   &--interior {
     background-color: @downy;
+
+    &:hover {
+      background-color: #59d5bc;
+    }
   }
 
   &--children {
     background-color: @puerto-rico;
+
+    &:hover {
+      background-color: #46c1ae;
+    }
+  }
+
+  &:hover {
+    margin-top: -5px;
+    padding-top: calc(+5px);
   }
 
   @media (min-width: @tablet-width) {
@@ -20,39 +33,67 @@
 }
 
 .promo-list__link {
+  position: relative;
   font-weight: 700;
   font-size: 19px;
   color: @white;
-  background-repeat: no-repeat;
-  background-position: right center;
   text-decoration: none;
   display: block;
   margin: 0 30px;
   margin-right: 27px;
   padding: 24px 0 31px;
 
-  &--interior {
-    background-color: @downy;
-    background-image: url("../img/decorative/interior.svg");
-    margin-right: 36px;
-  }
-
-  &--children {
-    background-color: @puerto-rico;
-    background-image: url("../img/decorative/toy.svg");
+  &::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 0;
+    width: 40px;
+    height: 62px;
+    background-repeat: no-repeat;
+    opacity: 0.5;
 
     @media (min-width: @tablet-width) {
-      margin-right: 33px;
+      top: 30px;
     }
+  }
 
-    @media (min-width: @desktop-width) {
-      margin-right: 35px;
-    }
+  &:hover::after {
+    opacity: 1;
+  }
+
+  &:active::after {
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     margin-left: 36px;
+    padding-bottom: 46px;
+  }
+}
+
+.promo-list__link--interior {
+  margin-right: 36px;
+
+  &::after {
+    background-image: url("../img/decorative/interior.svg");
+  }
+}
+
+.promo-list__link--children {
+  &::after {
+    background-image: url("../img/decorative/toy.svg");
+    width: 60px;
+    height: 60px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-right: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 35px;
   }
 }

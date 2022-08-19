@@ -16,5 +16,17 @@
 
 .social-list__link {
   display: flex;
-  padding: 3px 0 ;
+  padding: 3px 0;
+
+  &:hover .social-list__icon {
+    fill: #46c1ae;
+  }
+
+  &:active .social-list__icon {
+    opacity: 0.3;
+  }
+}
+
+.social-list__icon {
+  fill: @toggle;
 }

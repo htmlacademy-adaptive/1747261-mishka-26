@@ -21,10 +21,21 @@
   @media (min-width: @tablet-width) {
     display: block;
   }
+
+  &[href]:hover .main-footer__logo-image {
+    fill: #46c1ae;
+  }
+
+  &[href]:active .main-footer__logo-image {
+    opacity: 0.3;
+  }
+}
+
+.main-footer__logo-image {
+  display: block;
 }
 
 .main-footer__social-list {
-  max-width: 260px;
   margin: 0 auto;
 }
 
@@ -40,5 +51,6 @@
   @media (min-width: @tablet-width) {
     padding: 0;
     margin: 0;
+    min-width: 180px;
   }
 }

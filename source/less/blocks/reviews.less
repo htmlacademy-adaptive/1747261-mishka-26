@@ -1,18 +1,10 @@
-.reviews {
-  @media (min-width: @desktop-width) {
-    padding: 0 50px;
-  }
-}
-
 .reviews__wrapper {
-  padding: 0 30px;
-  padding-bottom: 45px;
+  padding: 0 30px 45px;
 
   @media (min-width: @tablet-width) {
-    max-width: 876px;
     padding: 79px 50px 47px;
-    margin: 0 auto;
-    margin-bottom: 68px;
+    max-width: 950px;
+    margin: 0 auto 68px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -23,10 +15,12 @@
   }
 
   @media (min-width: @desktop-width) {
+    box-sizing: border-box;
     max-width: 1050px;
     margin-bottom: 67px;
     padding-left: 174px;
     padding-bottom: 96px;
+    padding-right: 0;
   }
 }
 
@@ -42,18 +36,34 @@
     font-size: 43px;
     line-height: 50px;
     order: -2;
-    margin: 0;
+    margin: 4px 0 39px;
   }
-}
 
-.reviews__item {
-  margin: 0;
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+    margin-top: 0;
+    margin-bottom: 35px;
+  }
 }
 
 .reviews__text {
   line-height: 30px;
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 44px;
+  }
+}
+
+.reviews__author {
+  font-style: normal;
 }
 
 .reviews__author-name {
@@ -62,6 +72,14 @@
   color: @black;
   margin-bottom: 2px;
   display: block;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 17px;
+  }
 }
 
 .reviews__author-email {
@@ -69,23 +87,19 @@
   line-height: 30px;
   color: @basic-color;
   display: block;
-}
+  margin-bottom: 30px;
 
-.reviews__toggles {
   @media (min-width: @tablet-width) {
-    position: absolute;
-    bottom: 62px;
-    right: 50px;
-  }
-
-  @media (min-width: @desktop-width) {
-    bottom: 111px;
+    margin: 0;
   }
 }
 
 .reviews__button {
   @media (min-width: @tablet-width) {
-    padding: 16px 26px;
+    font-size: 17px;
+    min-width: 175px;
+    padding-top: 15px;
     order: -1;
+    margin-bottom: auto;
   }
 }

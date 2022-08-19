@@ -7,7 +7,7 @@
     display: block;
     width: 100%;
     max-width: 1050px;
-    height: 6px;
+    min-height: 6px;
     background-image: url("../img/decorative/zigzag-line.svg");
     background-repeat: repeat-x;
     background-size: contain;
@@ -26,16 +26,15 @@
 .advantages__wrapper {
   max-width: 260px;
   margin: 0 auto;
-  padding: 31px 0 58px;
+  padding: 30px 0 58px;
 
   @media (min-width: @tablet-width) {
-    padding: 36px 0 82px;
-    max-width: 668px;
+    padding: 55px 50px 25px;
+    max-width: 700px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 68px 0 90px;
-    max-width: 700px;
+    padding: 68px 50px 32px;
   }
 }
 
@@ -44,6 +43,18 @@
   line-height: 30px;
   margin: 0;
   margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+    margin-bottom: 39px;
+  }
 }
 
 .advantages__list {
@@ -56,24 +67,100 @@
 .advantages__item {
   font-size: 17px;
   line-height: 20px;
+  position: relative;
+  padding-top: 54px;
 
   &:not(:last-child) {
     margin-bottom: 30px;
-  }
 
-  &--style {
     @media (min-width: @tablet-width) {
-      grid-row: 2/3;
+      margin-bottom: 57px;
     }
   }
 
-  &--likes {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 55px;
+    height: 38px;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+    padding-right: 40px;
+  }
+}
+
+.advantages__item--ecology {
+  &::after {
+    background-image: url("../img/decorative/ecology.svg");
+    left: 8px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 56px;
+  }
+}
+
+.advantages__item--style {
+  padding-top: 53px;
+
+  &::after {
+    background-image: url("../img/decorative/style.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-row: 2/3;
+  }
+}
+
+.advantages__item--likes {
+  &::after {
+    background-image: url("../img/decorative/likes.svg");
+    left: 7px;
+    top: 5px;
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-row: 3/4;
+  }
+}
+
+.advantages__item--handmade {
+  padding-top: 52px;
+
+  &::after {
+    background-image: url("../img/decorative/handmade.svg");
+    left: 3px;
+
     @media (min-width: @tablet-width) {
-      grid-row: 3/4;
+      top: 3px;
     }
   }
 
   @media (min-width: @tablet-width) {
-    padding-right: 40px;
+    padding-top: 57px;
+  }
+}
+
+.advantages__item--support {
+  padding-top: 52px;
+
+  &::after {
+    background-image: url("../img/decorative/support.svg");
+    left: -6px;
+    top: 3px;
+  }
+}
+
+.advantages__item--gift-wrap {
+  &::after {
+    background-image: url("../img/decorative/gift-wrap.svg");
+    left: 3px;
+    top: 2px;
   }
 }
