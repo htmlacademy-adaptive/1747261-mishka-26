@@ -2,8 +2,9 @@
   display: none;
   margin-left: 50px;
 
-  @media (min-width: @desktop-width)  {
+  @media (min-width: @desktop-width) {
     display: flex;
+    z-index: 1;
   }
 }
 
@@ -12,4 +13,9 @@
   margin: 0;
   padding: 20px 0;
   padding-right: 62px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 18px;
+    padding-bottom: 19px;
+  }
 }

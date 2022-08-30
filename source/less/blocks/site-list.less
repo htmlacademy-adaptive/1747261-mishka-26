@@ -1,6 +1,7 @@
 .site-list {
   margin: 0;
   padding: 0;
+  z-index: 1;
 
   @media (min-width: @tablet-width) and (max-width: 1149.9px) {
     display: flex;
@@ -9,7 +10,7 @@
     min-width: 450px;
   }
 
-  @media (min-width: @desktop-width)  {
+  @media (min-width: @desktop-width) {
     display: flex;
     order: -1;
   }
@@ -22,7 +23,7 @@
     border: none;
   }
 
-  @media (min-width: @desktop-width)  {
+  @media (min-width: @desktop-width) {
     border: 1px solid @whisper;
     border-left: none;
 
@@ -34,13 +35,15 @@
 
 .site-list__link {
   @media (min-width: @tablet-width) {
+    font-size: 15px;
     margin: 0;
-    padding: 22px 18px;
+    padding: 19px 18px;
   }
 
   @media (min-width: @desktop-width) {
+    font-size: 17px;
     display: flex;
-    padding: 33px 35px;
+    padding: 32px 35px;
 
     &--catalog {
       padding-left: 50px;

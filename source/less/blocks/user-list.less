@@ -1,7 +1,8 @@
 .user-list {
   margin: 0;
   padding: 0;
-  @media (min-width: @tablet-width){
+
+  @media (min-width: @tablet-width) {
     display: flex;
     min-width: 400px;
   }
@@ -20,10 +21,25 @@
   }
 }
 
+.user-list__link--search {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    min-height: 88px;
+  }
+}
+
+.user-list__link--cart {
+  @media (min-width: @tablet-width) {
+    text-align: end;
+    padding-right: 50px;
+  }
+}
+
 .user-list__icon {
   position: absolute;
   left: 0;
   top: 31px;
+  fill: fade(@black, 20%);
 
   &--search {
     @media (min-width: @tablet-width) {
@@ -39,10 +55,12 @@
   }
 }
 
-.user-list__search {
-  @media (min-width: @tablet-width) {
-    margin: 0;
-  }
+.user-list__link:hover .user-list__icon {
+  fill: @downy;
+}
+
+.user-list__link:active .user-list__icon {
+  fill: fade(@downy, 30%);
 }
 
 .user-list__link-text {

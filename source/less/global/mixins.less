@@ -8,3 +8,24 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.item-background() {
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.input-placeholder-hover() {
+  &:hover {
+    border-color: @downy;
+  }
+
+  &:hover + .form-feedback__input-image {
+    fill: @downy;
+    opacity: 1;
+  }
+}
