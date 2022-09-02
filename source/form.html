@@ -11,7 +11,11 @@
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__logo-container">
           <a class="main-nav__logo" href="index.html">
-            <img class="main-nav__logo-image" src="img/content/logo-mobile.svg" width="86" height="35" alt="Логотип сайта Мишка.">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/content/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/content/logo-tablet.svg">
+              <img class="main-nav__logo-image" src="img/content/logo-mobile.svg" width="86" height="35" alt="Логотип сайта Мишка.">
+            </picture>
           </a>
 
           <button class="main-nav__toggle" type="button">

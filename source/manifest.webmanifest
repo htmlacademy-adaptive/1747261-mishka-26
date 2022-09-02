@@ -1,0 +1,12 @@
+{
+  "name": "favicons",
+  "short_name": "favic",
+  "description": "",
+  "start_url": "/",
+  "display": "standalone",
+
+  "icons": [
+    { "src": "img/favicons/192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "img/favicons/512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}
