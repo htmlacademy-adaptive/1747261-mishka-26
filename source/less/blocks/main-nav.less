@@ -12,12 +12,17 @@
 .main-nav__logo-container {
   position: relative;
   width: 100%;
+  min-height: 79px;
   border-top: 1px solid @whisper;
   border-bottom: 1px solid @whisper;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: 1149.9px) {
     width: 268px;
-    flex-grow: 1;
+    justify-content: flex-start;
   }
 
   @media (min-width: @desktop-width) {
@@ -27,8 +32,9 @@
 }
 
 .main-nav__logo {
-  display: block;
-  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
 
   &[href]:hover {
     opacity: 0.6;
@@ -41,12 +47,16 @@
 
 .main-nav__logo-image {
   display: block;
-  margin: 0 auto;
-  padding-top: 22px;
-  padding-bottom: 22px;
 
   @media (min-width: @tablet-width) and (max-width: 1149.9px) {
     margin-left: 48px;
+    width: 113px;
+    height: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 149px;
+    height: auto;
   }
 }
 
@@ -143,6 +153,12 @@
 
   @media (min-width: @tablet-width) {
     padding: 32px 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 
   &:hover {
