@@ -11,6 +11,8 @@
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -216,11 +218,18 @@
           </div>
         </dl>
 
-        <iframe class="contacts__map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.626526932528!2d30.32237636910491!3d59.93833917687267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1660649250199!5m2!1sru!2sru"
-          allowfullscreen
-          title="Офис компании по адресу ул. Большая Конюшенная д. 19/8, офис 101, Санкт-Петербург">
-        </iframe>
+        <div class="contacts__map-wrapper">
+          <iframe class="contacts__map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.626526932528!2d30.32237636910491!3d59.93833917687267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1660649250199!5m2!1sru!2sru"
+            allowfullscreen
+            title="Офис компании по адресу ул. Большая Конюшенная д. 19/8, офис 101, Санкт-Петербург">
+          </iframe>
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/content/map-desktop.jpg 1x, img/content/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/content/map-tablet.jpg 1x, img/content/map-tablet@2x.jpg 2x">
+            <img class="contacts__map-nojs" src="img/content/map.jpg" srcset="img/content/map@2x.jpg 2x" width="320" height="454" alt="Офис компании по адресу ул. Большая Конюшенная д. 19/8, офис 101, Санкт-Петербург">
+          </picture>
+        </div>
 
         <a class="contacts__button button" href="#">Напишите нам</a>
       </section>
