@@ -234,9 +234,9 @@
   &[type="tel"],
   &[type="email"] {
     padding-bottom: 16px;
-
-    .input-placeholder-hover();
   }
+
+  .input-placeholder-hover();
 
   @media (min-width: @tablet-width) {
     font-size: 19px;
@@ -370,6 +370,11 @@
 .form-feedback__radio[disabled] ~ .form-feedback__label,
 .form-feedback__checkbox[disabled] ~ .form-feedback__label {
   opacity: 0.3;
+}
+
+.form-feedback__radio:focus ~ .form-feedback__label,
+.form-feedback__checkbox:focus ~ .form-feedback__label {
+  color: @downy;
 }
 
 .form-feedback__textarea {

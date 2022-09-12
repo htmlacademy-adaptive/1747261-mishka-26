@@ -5,7 +5,8 @@ let productWeekButton = document.querySelector('.product-week__button');
 let modal = document.querySelector('.modal');
 
 navMain.classList.remove('main-nav--nojs');
-document.querySelector('.contacts__map--nojs').style.display = 'none';
+document.querySelector('.contacts__map-nojs').style.display = 'none';
+document.querySelector('.contacts__map').style.display = 'block';
 
 navToggle.addEventListener('click', function () {
   if (navMain.classList.contains('main-nav--closed')) {
