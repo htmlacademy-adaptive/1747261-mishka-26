@@ -213,7 +213,7 @@
 .form-feedback__input-text {
   position: relative;
   padding: 8px 0 13px;
-  font-family: "Open Sans", serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
   width: 100%;
@@ -365,6 +365,11 @@
       height: 12px;
     }
   }
+}
+
+.form-feedback__radio[disabled] ~ .form-feedback__label,
+.form-feedback__checkbox[disabled] ~ .form-feedback__label {
+  opacity: 0.3;
 }
 
 .form-feedback__textarea {
